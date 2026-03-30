@@ -1,7 +1,11 @@
+import BaseLayout from "@/components/layout/base-layout";
+import SidebarMain from "@/components/sidebar-main";
+import { FlickeringGrid } from "@/components/ui/flickering-grid";
+
 export default function Home() {
   return (
-    <main className="bg-blue-500">
-      <div>Hello Next.JS</div>
-    </main>
+    <BaseLayout sidebar={<SidebarMain />}>
+      <div />
+    </BaseLayout>
   );
 }

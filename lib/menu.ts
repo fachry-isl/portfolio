@@ -11,19 +11,19 @@ export const publicDashboardMenu = [
     href: "/projects",
     icon: FolderCode,
   },
-  {
-    title: "About",
-    href: "/about",
-    icon: User,
-  },
-  {
-    title: "Contact",
-    href: "/contact",
-    icon: Mail,
-  },
-  {
-    title: "Settings",
-    href: "/settings",
-    icon: Settings,
-  },
+  // {
+  //   title: "About",
+  //   href: "/about",
+  //   icon: User,
+  // },
+  // {
+  //   title: "Contact",
+  //   href: "/contact",
+  //   icon: Mail,
+  // },
+  // {
+  //   title: "Settings",
+  //   href: "/settings",
+  //   icon: Settings,
+  // },
 ];

@@ -72,11 +72,7 @@ export const Typography = {
   }: {
     children: React.ReactNode;
     className?: string;
-  }) => (
-    <p className={cn("leading-7 [&:not(:first-child)]:mt-6", className)}>
-      {children}
-    </p>
-  ),
+  }) => <p className={cn("leading-7 not-first:mt-6", className)}>{children}</p>,
   Small: ({
     children,
     className,

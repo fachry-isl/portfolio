@@ -63,7 +63,7 @@ const IntroSection = () => {
               <span className="text-muted-foreground">I&apos;m a</span>
               <TypingAnimation
                 words={roles}
-                className="font-semibold text-lg md:text-xl bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent"
+                className="font-semibold text-lg md:text-xl bg-linear-to-r from-primary to-primary/60 bg-clip-text text-transparent"
                 duration={120}
                 pauseDelay={2500}
                 loop
@@ -142,7 +142,7 @@ const IntroSection = () => {
       <BlurFade delay={0.1} inView className="md:hidden flex justify-center">
         <div className="relative w-fit">
           {/* Glow Effect */}
-          <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/30 via-purple-500/20 to-pink-500/30 blur-2xl opacity-60 dark:opacity-40" />
+          <div className="absolute inset-0 rounded-full bg-linear-to-br from-primary/30 via-purple-500/20 to-pink-500/30 blur-2xl opacity-60 dark:opacity-40" />
 
           {/* Image */}
           <Image

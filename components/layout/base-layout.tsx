@@ -6,9 +6,11 @@ import { ScrollProgress } from "@/components/ui/scroll-progress";
 const BaseLayout = ({
   children,
   sidebar,
+  rightSidebar,
 }: {
   children: React.ReactNode;
   sidebar: React.ReactNode;
+  rightSidebar?: React.ReactNode;
 }) => {
   return (
     <>
@@ -34,7 +36,9 @@ const BaseLayout = ({
         <div className="flex md:gap-6">
           {sidebar && <aside>{sidebar}</aside>}
           <main className="mb-16 pt-4 w-full overflow-hidden">{children}</main>
-          {/* {rightSidebar && <aside className="hidden md:block w-64">{rightSidebar}</aside>}  */}
+          {rightSidebar && (
+            <aside className="hidden md:block w-64">{rightSidebar}</aside>
+          )}
         </div>
         {/* <Footer /> */}
       </div>

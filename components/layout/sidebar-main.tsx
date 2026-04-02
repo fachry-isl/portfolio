@@ -1,10 +1,12 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import { Avatar } from "@/components/ui/avatar";
 import { Typography } from "@/components/ui/typography";
 import { BadgeCheck as VerifiedIcon } from "lucide-react";
 import SidebarSecondary from "./sidebar-secondary";
-import { publicDashboardMenu } from "@/lib/menu";
+import { publicDashboardMenu } from "@/commons/constants/navigation-menu";
 
 const SidebarMain = () => {
   return (

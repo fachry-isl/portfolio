@@ -17,7 +17,7 @@ export default function AboutSection() {
           to web and mobile development as well as UI/UX design.
           <div className="flex gap-4 w-full mt-4">
             <Link
-              href="https://drive.google.com/file/d/1cZnjFsdn5vduIwuaRxtYLVigoqeA0YiN/view?usp=sharing"
+              href="https://drive.google.com/file/d/1Q1LsAR3YZTxdFB1Bcq8WlLQEahORcgz5/view?usp=sharing"
               target="_blank"
             >
               <div
@@ -31,17 +31,14 @@ export default function AboutSection() {
                 </AnimatedShinyText>
               </div>
             </Link>
-            <Link
-              href="https://drive.google.com/file/d/1f-x1PWRBmoYzzPi8t8thA0s6RTymuTdx/view?usp=sharing"
-              target="_blank"
-            >
+            <Link href="/" target="_blank">
               <AnimatedGradientText className="h-8 rounded-md px-3 text-xs">
                 <span
                   className={cn(
                     `inline animate-gradient bg-linear-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-size-[var(--bg-size)_100%] bg-clip-text text-transparent`,
                   )}
                 >
-                  View Portfolio in PDF
+                  View Portfolio in PDF (TBD)
                 </span>
                 <FileText
                   size={16}

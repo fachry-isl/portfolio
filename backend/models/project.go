@@ -7,7 +7,7 @@ import (
 	"github.com/lib/pq"
 )
 
-type PortfolioProject struct {
+type Project struct {
 	ID          uuid.UUID      `db:"id" json:"id"`
 	Slug        string         `db:"slug" json:"slug"`
 	Title       string         `db:"title" json:"title"`

@@ -32,6 +32,5 @@ func (h *ProfileHandler) GetAll(w http.ResponseWriter, r *http.Request) {
 	}
 
 	w.Header().Set("Content-Type", "application/json")
-	print("Profiles: ", profiles)
 	json.NewEncoder(w).Encode(profiles)
 }

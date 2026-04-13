@@ -48,6 +48,10 @@ func main() {
 	profileService := services.NewProfileService(profileRepo)
 	profileHandler := handlers.NewProfileHandler(profileService)
 
+	projectRepo := repositories.NewProjectRepository(db)
+	projectService := services.NewProjectService(projectRepo)
+	projectHandler := handlers.NewProjectHandler(projectService)
+
 	// Setup Routes
 	mux := http.NewServeMux()
 
@@ -80,12 +84,14 @@ func main() {
 	// 	}
 	// })
 
+	// GET localhost:8080/api/projects
+	mux.HandleFunc("/api/projects", projectHandler.HandleProjects)
+
 	// localhost:8080/health
 	mux.HandleFunc("/api/health", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
 		json.NewEncoder(w).Encode(map[string]string{
-			"status":  "OK",
-			"message": "API Running",
+			"message": "API is Running!",
 		})
 	})
 
@@ -94,23 +100,4 @@ func main() {
 	if err != nil {
 		fmt.Println("Failed to load server at :8080")
 	}
-
-	// Query Starts here
-	// ctx := context.Background()
-	// ctx, _ = context.WithTimeout(ctx, 100*time.Millisecond)
-	// //CollectRows automatically iterates and scans for you
-	// rows, err := db.Query(ctx, "SELECT id, lesson_name FROM public.learnesia_lesson LIMIT 5")
-	// if err != nil {
-	// 	fmt.Printf("Query error: %v\n", err)
-	// }
-
-	// lessons, err := pgx.CollectRows(rows, pgx.RowToStructByName[Lesson])
-	// if err != nil {
-	// 	fmt.Printf("CollectRows error: %v\n", err)
-	// 	return
-	// }
-
-	// fmt.Printf("Retrieved %d lessons:\n", len(lessons))
-	// for _, l := range lessons {
-	// 	fmt.Printf(" - [%d] %s\n", l.ID, l.LessonName)
 }

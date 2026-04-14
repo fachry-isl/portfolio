@@ -61,38 +61,16 @@ func main() {
 
 	// GET localhost:8080/api/profiles
 	mux.HandleFunc("/api/profiles", profileHandler.HandleProfiles)
-	// POST localhost:8080/api/profiles
-	// mux.HandleFunc("/profiles", func(w http.ResponseWriter, r *http.Request) {
-	// 	if r.Method == "GET" {
-	// 		w.Header().Set("Content-Type", "application/json")
-	// 		err := json.NewEncoder(w).Encode(profiles)
-	// 		if err != nil {
-	// 			http.Error(w, "Invalid Request", http.StatusBadGateway)
-	// 		}
-	// 	}
-
-	// 	if r.Method == "POST" {
-	// 		// Read request
-	// 		var newProfile models.Profile
-	// 		err := json.NewDecoder(r.Body).Decode(&newProfile)
-	// 		if err != nil {
-	// 			http.Error(w, "Invalid Request", http.StatusBadRequest)
-	// 		}
-
-	// 		fmt.Println("Body: ", newProfile)
-	// 		newProfile.ID = uuid.New()
-	// 		profiles = append(profiles, newProfile)
-
-	// 		w.Header().Set("Content-Type", "application/json")
-	// 		json.NewEncoder(w).Encode(newProfile)
-	// 	}
-	// })
 
 	// GET localhost:8080/api/projects
 	mux.HandleFunc("/api/projects", projectHandler.HandleProjects)
+	// GET localhost:8080/api/projects/{id}
+	mux.HandleFunc("/api/projects/", projectHandler.HandleProjectByID)
 
 	// Get localhost:8080/api/posts
 	mux.HandleFunc("/api/posts", postHandler.HandlePost)
+	// Get localhost:8080/api/posts/{id}
+	mux.HandleFunc("/api/posts/", postHandler.HandlePostByID)
 
 	// localhost:8080/health
 	mux.HandleFunc("/api/health", func(w http.ResponseWriter, r *http.Request) {

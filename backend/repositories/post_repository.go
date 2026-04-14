@@ -1,6 +1,9 @@
 package repositories
 
 import (
+	"database/sql"
+	"fmt"
+
 	"github.com/jackc/pgx/v5/pgxpool"
 
 	"github.com/fachry-isl/portfolio/models"
@@ -38,5 +41,18 @@ func (r *PostRepository) GetAll() ([]models.Post, error) {
 	}
 
 	return posts, nil
+}
 
+func (r *PostRepository) GetByID(id string) (*models.Post, error) {
+	ctx := context.Background()
+	var p models.Post
+	// fmt.Println("ID: %v", id)
+	err := r.db.QueryRow(ctx, "SELECT * FROM portfolio_posts WHERE id = $1", id).Scan(&p.ID, &p.Slug, &p.Title, &p.Summary, &p.Content, &p.CoverURL, &p.Tags, &p.Featured, &p.Status, &p.PublishedAt, &p.CreatedAt)
+	if err == sql.ErrNoRows {
+		return nil, fmt.Errorf("No Post Found")
+	}
+	if err != nil {
+		return nil, err
+	}
+	return &p, nil
 }

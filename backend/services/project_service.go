@@ -16,3 +16,7 @@ func NewProjectService(repo *repositories.ProjectRepository) *ProjectService {
 func (s *ProjectService) GetAll() ([]models.Project, error) {
 	return s.repo.GetAll()
 }
+
+func (s *ProjectService) GetByID(id string) (*models.Project, error) {
+	return s.repo.GetByID(id)
+}

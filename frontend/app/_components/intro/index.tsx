@@ -12,8 +12,8 @@ import { Sparkles, ArrowRight } from "lucide-react";
 const roles = [
   "Software Engineer",
   "Full-Stack Developer",
-  "Cloud Enthusiast",
-  "DevOps Learner",
+  "Machine Learning Enthusiast",
+  "DevOps",
 ];
 
 const IntroSection = () => {

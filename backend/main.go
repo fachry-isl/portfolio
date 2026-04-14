@@ -52,6 +52,10 @@ func main() {
 	projectService := services.NewProjectService(projectRepo)
 	projectHandler := handlers.NewProjectHandler(projectService)
 
+	postRepo := repositories.NewPostRepository(db)
+	postService := services.NewPostService(postRepo)
+	postHandler := handlers.NewPostHandler(postService)
+
 	// Setup Routes
 	mux := http.NewServeMux()
 
@@ -86,6 +90,9 @@ func main() {
 
 	// GET localhost:8080/api/projects
 	mux.HandleFunc("/api/projects", projectHandler.HandleProjects)
+
+	// Get localhost:8080/api/posts
+	mux.HandleFunc("/api/posts", postHandler.HandlePost)
 
 	// localhost:8080/health
 	mux.HandleFunc("/api/health", func(w http.ResponseWriter, r *http.Request) {

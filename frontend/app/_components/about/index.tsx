@@ -12,9 +12,8 @@ export default function AboutSection() {
       <div className="mt-10">
         <Typography.H4>About</Typography.H4>
         <div className="font-sans text-sm text-muted-foreground dark:prose-invert">
-          Experience in Software Development with skills in Web and Mobile
-          Development. I am still an undergraduate and have experience related
-          to web and mobile development as well as UI/UX design.
+          Versatile Individuals with Experience in Data Analytics, Machine
+          Learning and Software Delopment.
           <div className="flex gap-4 w-full mt-4">
             <Link
               href="https://drive.google.com/file/d/1Q1LsAR3YZTxdFB1Bcq8WlLQEahORcgz5/view?usp=sharing"

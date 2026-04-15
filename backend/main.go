@@ -70,7 +70,7 @@ func main() {
 	// Get localhost:8080/api/posts
 	mux.HandleFunc("/api/posts", postHandler.HandlePost)
 	// Get localhost:8080/api/posts/{id}
-	mux.HandleFunc("/api/posts/", postHandler.HandlePostByID)
+	mux.HandleFunc("/api/posts/", postHandler.HandlePostByIDorSlug)
 
 	// localhost:8080/health
 	mux.HandleFunc("/api/health", func(w http.ResponseWriter, r *http.Request) {

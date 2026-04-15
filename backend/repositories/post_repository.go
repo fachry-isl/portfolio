@@ -56,3 +56,17 @@ func (r *PostRepository) GetByID(id string) (*models.Post, error) {
 	}
 	return &p, nil
 }
+
+func (r *PostRepository) GetBySlug(slug string) (*models.Post, error) {
+	ctx := context.Background()
+	var p models.Post
+
+	err := r.db.QueryRow(ctx, "SELECT * FROM portfolio_posts WHERE slug = $1", slug).Scan(&p.ID, &p.Slug, &p.Title, &p.Summary, &p.Content, &p.CoverURL, &p.Tags, &p.Featured, &p.Status, &p.PublishedAt, &p.CreatedAt)
+	if err == sql.ErrNoRows {
+		return nil, fmt.Errorf("No Post Found")
+	}
+	if err != nil {
+		return nil, err
+	}
+	return &p, nil
+}

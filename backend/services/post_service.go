@@ -20,3 +20,7 @@ func (s *PostService) GetAll() ([]models.Post, error) {
 func (s *PostService) GetByID(id string) (*models.Post, error) {
 	return s.repo.GetByID(id)
 }
+
+func (s *PostService) GetBySlug(slug string) (*models.Post, error) {
+	return s.repo.GetBySlug(slug)
+}

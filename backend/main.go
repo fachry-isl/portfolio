@@ -69,7 +69,7 @@ func main() {
 
 	// Get localhost:8080/api/posts
 	mux.HandleFunc("/api/posts", postHandler.HandlePost)
-	// Get localhost:8080/api/posts/{id}
+	// Get localhost:8080/api/posts/{id/slug}
 	mux.HandleFunc("/api/posts/", postHandler.HandlePostByIDorSlug)
 
 	// localhost:8080/health

@@ -17,6 +17,7 @@ const SidebarMain = () => {
             <Image
               height={200}
               width={200}
+              loading="eager"
               alt="Fachry Ikhsal"
               src="/fachry.jpg"
               draggable="false"

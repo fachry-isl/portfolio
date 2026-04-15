@@ -30,7 +30,7 @@ export default function AboutSection() {
                 </AnimatedShinyText>
               </div>
             </Link>
-            <Link href="/" target="_blank">
+            {/* <Link href="/" target="_blank">
               <AnimatedGradientText className="h-8 rounded-md px-3 text-xs">
                 <span
                   className={cn(
@@ -44,7 +44,7 @@ export default function AboutSection() {
                   className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5"
                 />
               </AnimatedGradientText>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

@@ -113,7 +113,7 @@ const IntroSection = () => {
           </div>
 
           {/* Social Links */}
-          <div
+          {/* <div
             className="animate-fade-in-up"
             style={{ animationDelay: "500ms" }}
           >
@@ -134,7 +134,7 @@ const IntroSection = () => {
                 ))}
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </BlurFade>
 
@@ -148,6 +148,7 @@ const IntroSection = () => {
           <Image
             src="/fachry.jpg"
             alt="Fachry Ikhsal"
+            loading="eager"
             width={200}
             height={200}
             priority

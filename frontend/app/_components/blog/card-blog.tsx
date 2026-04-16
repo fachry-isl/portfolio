@@ -28,7 +28,7 @@ export default function CardBlog({
               draggable={false}
               loading="lazy"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+            <div className="absolute inset-0 bg-linear-to-t from-background/20 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
           </div>
         )}
         <CardHeader className="p-4 pb-2">

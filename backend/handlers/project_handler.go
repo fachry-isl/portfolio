@@ -9,6 +9,13 @@ import (
 	"strings"
 )
 
+func derefStr(s *string) string {
+	if s == nil {
+		return ""
+	}
+	return *s
+}
+
 type ProjectHandler struct {
 	service *services.ProjectService
 }
@@ -41,10 +48,10 @@ func (h *ProjectHandler) GetAll(w http.ResponseWriter, r *http.Request) {
 		result = append(result, map[string]string{
 			"id":        p.ID.String(),
 			"title":     p.Title,
-			"summary":   *p.Summary,
-			"cover_url": *p.CoverURL,
-			"demo_url":  *p.DemoURL,
-			"repo_url":  *p.RepoURL,
+			"summary":   derefStr(p.Summary),
+			"cover_url": derefStr(p.CoverURL),
+			"demo_url":  derefStr(p.DemoURL),
+			"repo_url":  derefStr(p.RepoURL),
 		})
 	}
 

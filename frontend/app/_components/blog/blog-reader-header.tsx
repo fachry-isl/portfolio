@@ -20,7 +20,6 @@ interface BlogReaderHeaderProps {
 const BlogReaderHeader = ({
   title,
   comments_count = 0,
-  page_views_count,
   published_at,
   reading_time_minutes,
 }: BlogReaderHeaderProps) => {
@@ -76,14 +75,6 @@ const BlogReaderHeader = ({
         </Typography.P>
 
         <div className="flex items-center gap-5">
-          <div className="flex items-center gap-1 font-medium">
-            <ViewIcon size={18} className="shrink-0" />
-            <span className="ml-0.5 flex items-center gap-1">
-              <span>{page_views_count ?? "-"}</span>
-              <span>Views</span>
-            </span>
-          </div>
-
           <div className="flex items-center gap-1 font-medium">
             <ClockIcon size={18} className="shrink-0" />
             <span className="ml-0.5 flex items-center gap-1">

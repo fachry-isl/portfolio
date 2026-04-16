@@ -24,7 +24,6 @@ const BlogReaderView = ({ prop, pageViewCount }: BlogReaderViewProps) => {
         title={title}
         reading_time_minutes={5}
         published_at={published_at}
-        page_views_count={pageViewCount}
       />
       <div className="space-y-6 leading-[1.8] dark:text-neutral-300 ">
         <div className="overflow-hidden rounded-xl max-h-[300px]">

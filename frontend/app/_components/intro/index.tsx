@@ -79,17 +79,17 @@ const IntroSection = () => {
             style={{ animationDelay: "300ms" }}
           >
             <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
-              Passionate about{" "}
+              Curious individuals who loves tinkering around{" "}
               <span className="font-medium text-foreground">
-                web, mobile, cloud, and DevOps development
+                Software, Cloud, AI and DevOps
               </span>
               . I love creating innovative solutions using modern technologies
               like{" "}
               <span className="font-medium text-foreground">
-                React, Next.js, TypeScript
+                React, Next.js, TypeScript, Go
               </span>
-              , and more. Currently focused on building high-performance
-              applications and learning CI/CD pipelines.
+              , and more. Currently focused on learning Automation, AI Agent and
+              LLM orchestration.
             </p>
           </div>
 

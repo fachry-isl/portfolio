@@ -13,8 +13,11 @@ services:
           cpus: "0.75"
         reservations:
           memory: 150M
-    ports:
-      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=/api
+      - API_URL=http://backend:8080/api
+    expose:
+      - "3000"
     restart: unless-stopped
 
   backend:
@@ -29,8 +32,7 @@ services:
           cpus: "0.50"
         reservations:
           memory: 20M
-    ports:
-      - "8080:8080"
-    environment:
-      - GO_ENV=production
+    expose:
+      - "8080"
+      # - GO_ENV=production - Use this pattern to make code based logic
     restart: unless-stopped

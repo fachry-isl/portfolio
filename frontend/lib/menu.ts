@@ -1,4 +1,4 @@
-import { Home, User, Settings, FolderCode, Mail } from "lucide-react";
+import { Home, FolderCode } from "lucide-react";
 
 export const publicDashboardMenu = [
   {

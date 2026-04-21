@@ -27,3 +27,7 @@ services:
     environment:
       - GO_ENV=development
     restart: unless-stopped
+
+  nginx:
+    profiles:
+      - donotstart # effectively disables nginx in dev

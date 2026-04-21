@@ -11,7 +11,8 @@ import (
 // InitDB initializes and returns a database connection pool
 func InitDB(connectionString string) (*pgxpool.Pool, error) {
 	ctx := context.Background()
-	ctx, _ = context.WithTimeout(ctx, 10000*time.Millisecond)
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel() // ✅ always cancel to free resource
 
 	// Create a connection pool
 	pool, err := pgxpool.New(ctx, connectionString)

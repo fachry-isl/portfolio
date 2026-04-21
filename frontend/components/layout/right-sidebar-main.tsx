@@ -59,7 +59,7 @@ const SOCIALS = [
   {
     name: "Email",
     icon: Mail,
-    href: "mailto:fikhsal@gmail.com",
+    href: "mailto:fachryikhsal890@gmail.com",
     color: "hover:text-red-500",
   },
 ];

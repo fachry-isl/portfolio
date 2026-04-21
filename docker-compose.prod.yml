@@ -15,8 +15,6 @@ services:
           memory: 150M
     ports:
       - "3000:3000"
-    environment:
-      - NEXT_PUBLIC_API_URL=https://yourdomain.com
     restart: unless-stopped
 
   backend:

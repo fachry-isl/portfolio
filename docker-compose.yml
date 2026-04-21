@@ -6,9 +6,13 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
     image: portfolio-frontend
+    env_file:
+      - ./frontend/.env
 
   backend:
     build:
       context: ./backend
       dockerfile: Dockerfile
     image: portfolio-backend
+    env_file:
+      - ./backend/.env

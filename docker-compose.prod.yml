@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   frontend:
     build:
@@ -36,3 +34,18 @@ services:
       - "8080"
       # - GO_ENV=production - Use this pattern to make code based logic
     restart: unless-stopped
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    command: tunnel --no-autoupdate run
+    environment:
+      - TUNNEL_TOKEN=${CLOUDFLARE_TUNNEL_TOKEN}
+    depends_on:
+      - nginx
+    restart: unless-stopped
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    external: false # Outside of this

@@ -1,3 +1,3 @@
 # Portfolio
 
-Portolio Website Built with NextJS frontend and Go backend
+Portfolio Website Built with NextJS frontend and Go backend

@@ -13,15 +13,17 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const description =
+  "Full-Stack Engineer in Data Analytics, ML, DevOps & Software Dev. Exploring AI Agent & LLM Orchestration. Python, React, Next.js, Go. Jakarta, Indonesia.";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://fachryikhsal.learnesia.co.id"),
 
   title: {
     default: "Fachry Ikhsal | Full-Stack Engineer & AI Developer",
-    template: "%s | Fachry Ikhsal", // subpages: "Projects | Fachry Ikhsal"
+    template: "%s | Fachry Ikhsal",
   },
-  description:
-    "Full-Stack Software Engineer with 2+ years experience in React, Next.js, Go, DevOps, and AI/LLM orchestration. Based in Jakarta, Indonesia.",
+  description,
   keywords: [
     "Fachry Ikhsal",
     "software engineer Jakarta",
@@ -29,6 +31,9 @@ export const metadata: Metadata = {
     "Next.js Go developer",
     "AI engineer",
     "LLM orchestration",
+    "AI agent",
+    "data analytics",
+    "machine learning engineer",
   ],
 
   // Canonical tag — for google search indexing
@@ -41,8 +46,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://fachryikhsal.learnesia.co.id",
     title: "Fachry Ikhsal | Full-Stack Engineer & AI Developer",
-    description:
-      "Full-Stack Engineer specializing in Machine Learning and Software DevelopmentReact. Tech Stacks: Python, React JS, Next.js, Go",
+    description,
     siteName: "Fachry Ikhsal",
     images: [
       {
@@ -57,8 +61,8 @@ export const metadata: Metadata = {
   // Twitter / X Card
   twitter: {
     card: "summary_large_image",
-    title: "Fachry Ikhsal | Full-Stack Engineer",
-    description: "Full-Stack Engineer. React, Next.js, Go, AI.",
+    title: "Fachry Ikhsal | Full-Stack Engineer & AI Developer",
+    description,
     images: ["/fachry.jpg"],
   },
 

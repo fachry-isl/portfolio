@@ -15,7 +15,7 @@ const BaseLayout = ({
   return (
     <>
       <ScrollProgress />
-      <div className="container min-h-screen pt-12 sm:pt-24 px-6">
+      <div className="container mx-auto min-h-screen pt-12 sm:pt-24 px-6">
         <div className="fixed inset-0 flex items-center justify-center overflow-hidden h-40 pointer-events-none z-[-1]">
           <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden bg-background [-webkit-mask-image:linear-gradient(to_bottom,black,transparent)]">
             <FlickeringGrid

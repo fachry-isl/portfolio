@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     "full stack developer Indonesia",
     "Next.js Go developer",
     "AI engineer",
+    "AI engineer Jakarta",
     "LLM orchestration",
     "AI agent",
     "data analytics",
